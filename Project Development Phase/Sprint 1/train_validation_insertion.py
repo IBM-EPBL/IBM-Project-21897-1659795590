@@ -10,6 +10,9 @@ from Training_DB_Operations.db_operation import DBOperations
 class TrainingFilesValidation:
 
     def __init__(self, path):
+        """
+            This class is responsible for the data validation and insertion of valid data into the db
+        """
         self.file_name = 'TrainingFilesValidation.txt'
         self.log_writer = App_Logger()
         self.raw_data = RawDataValidation(path)
@@ -34,26 +37,6 @@ class TrainingFilesValidation:
             # replacing blanks in the csv file with "Null" values to insert in table
             # self.dataTransform.replaceMissingWithNull()
 
-            # create database with given name, if present open the connection! Create table with columns given in schema
-            self.log_writer.log(self.file_name, "Starting creating Table in sqlite")
-
-            self.dBOperation.createTableDb('credit_card_training', column_names)
-
-            # insert csv files in the table
-            self.log_writer.log(self.file_name, "Inserting the data into table")
-            self.dBOperation.insertIntoTableFromGoodData('credit_card_training')
-            # self.dBOperation.insertIntoTableFromGoodData("credit_card1")
-
-            # Delete the good data folder after loading files in table
-            self.log_writer.log(self.file_name, "Deleting Existing Good Data Folder")
-            self.raw_data.deleteExistingGoodDataRawFolder()
-
-            # Move the bad files to archive folder
-            self.log_writer.log(self.file_name, "Moving bad data folder to Archive")
-            self.raw_data.moveBadFilesToArchiveBad()
-            # export data in table to csvfile
-
-            self.dBOperation.selectingDatafromtableintocsv('credit_card_training')
 
         except Exception as e:
             self.log_writer.log(self.file_name, "Something went wrong in TrainingFiles Validation.The exception is "+str(e))
