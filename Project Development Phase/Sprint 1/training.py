@@ -2,6 +2,9 @@ import pandas as pd
 from train_validation_insertion import TrainingFilesValidation as train_validation
 from training_model import TrainModel as trainModel
 
+"""
+Entry point of the training
+"""
 def start_training():
     try:
         path = 'Training_BatchFiles/' # path where the dataset resides
