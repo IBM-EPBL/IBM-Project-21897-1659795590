@@ -12,6 +12,11 @@ def start_training():
         # starting potin of data validation and valid data insertion into the database
         train_valObj = train_validation(path)  # object initialization
         train_valObj.train_validation()  # calling the training_validation function
+        
+        #straing porint of the data preprocessing
+        trainModelObj = trainModel()  # object initialization
+        trainModelObj.model_training()  # training the model for the files in the table
+
 
     except Exception as e:
         print("Something went wrong in start_training.The exception is "+str(e))
