@@ -7,8 +7,8 @@ def start_training():
         path = 'Training_BatchFiles/'
         # df = pd.read_csv(path)
 
-        # train_valObj = train_validation(path)  # object initialization
-        # train_valObj.train_validation()  # calling the training_validation function
+        train_valObj = train_validation(path)  # object initialization
+        train_valObj.train_validation()  # calling the training_validation function
 
         trainModelObj = trainModel()  # object initialization
         trainModelObj.model_training()  # training the model for the files in the table
