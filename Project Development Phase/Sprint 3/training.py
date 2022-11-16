@@ -12,6 +12,9 @@ def start_training():
         train_valObj = train_validation(path)  # object initialization
         train_valObj.train_validation()  # calling the training_validation function
 
+        # Entry point of model selection and model building
+        trainModelObj = trainModel()  # object initialization
+        trainModelObj.model_training()  # training the model for the files in the table
 
 
     except Exception as e:
