@@ -4,6 +4,7 @@ from training_model import TrainModel as trainModel
 
 """
 Starting point of the training
+"""
 def start_training():
     try:
         path = 'Training_BatchFiles/'
