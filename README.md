@@ -9,4 +9,4 @@ The aim of this project is to  predict the probability of credit default based o
 
 #### Application Link : https://python-flask-app-bpxfi-2022-11-17-optimistic-gorilla-og.mybluemix.net/
 #### Demo Video Link: https://www.kapwing.com/videos/6378865139435c01e174bab0
-#### source code link:[ https://github.com/sudharsanbaskars/smart-loan-lender](https://github.com/IBM-EPBL/IBM-Project-21897-1659795590/tree/main/Final%20Deliverables/smart-loan-lender-main )
+#### source code link:https://github.com/IBM-EPBL/IBM-Project-21897-1659795590/tree/main/Final%20Deliverables/smart-loan-lender-main 
